@@ -1,0 +1,47 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.title {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+
+.tagChip {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 5px 10px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color var(--t-base), background var(--t-base);
+}
+.tagChip:hover { border-color: var(--primary); background: var(--primary-tint); }
+
+.tagName { color: var(--primary); font-weight: 600; }
+.tagCount { color: var(--ink-faint); font-family: var(--font-mono); font-size: 11px; }
+
+.empty { font-size: 13px; color: var(--ink-faint); font-family: var(--font-mono); }
+
+.skeleton {
+  height: 80px;
+  border-radius: var(--r-md);
+  background: var(--border-soft);
+  animation: shimmer 1.4s infinite linear;
+  background-image: linear-gradient(90deg, var(--border-soft) 0%, var(--border) 50%, var(--border-soft) 100%);
+  background-size: 200% 100%;
+}
+@keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }

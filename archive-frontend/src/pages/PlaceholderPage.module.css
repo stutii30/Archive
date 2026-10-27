@@ -1,0 +1,20 @@
+.content {
+  padding: 28px var(--sp-8) 60px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.title {
+  font-family: var(--font-head);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+}

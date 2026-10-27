@@ -1,0 +1,139 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-8);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-soft);
+  transition: background var(--t-state);
+}
+
+/* ── Search ────────────────────────────────────────────────────────────────── */
+.searchWrap {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 9px 14px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  color: var(--ink-faint);
+  transition: border-color var(--t-base), box-shadow var(--t-base);
+}
+
+.searchWrap:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-tint);
+  color: var(--ink);
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+.searchInput::placeholder { color: var(--ink-faint); }
+
+/* Hide native search cancel button */
+.searchInput::-webkit-search-cancel-button { display: none; }
+
+.shortcut {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink-faint);
+  background: var(--border-soft);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Right actions ─────────────────────────────────────────────────────────── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-left: auto;
+}
+
+.iconBtn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-md);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
+}
+
+.iconBtn:hover {
+  color: var(--ink);
+  border-color: var(--ink-faint);
+  box-shadow: var(--shadow-sm);
+}
+
+.iconBtn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: var(--r-full);
+  background: var(--coral);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 9px 16px;
+  border-radius: var(--r-lg);
+  background: var(--primary);
+  color: var(--primary-ink);
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow var(--t-base), transform var(--t-fast);
+  white-space: nowrap;
+}
+
+.primaryBtn:hover { box-shadow: var(--shadow-md); }
+.primaryBtn:active { transform: scale(0.97); }
+.primaryBtn:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+.actionIcon {
+  font-size: 16px;
+  line-height: 1;
+}

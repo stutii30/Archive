@@ -1,0 +1,177 @@
+.card {
+  display: flex;
+  gap: var(--sp-4);
+  padding: var(--sp-5) var(--sp-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  transition: border-color var(--t-base), box-shadow var(--t-base);
+}
+
+.card:hover {
+  border-color: var(--ink-faint);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Avatar column ─────────────────────────────────────────────────────────── */
+.avatarCol { flex-shrink: 0; }
+
+/* ── Body ──────────────────────────────────────────────────────────────────── */
+.body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.authorName { font-size: 13px; font-weight: 600; color: var(--ink); }
+.dot { color: var(--ink-faint); font-size: 12px; }
+.timeAgo { font-size: 12px; color: var(--ink-faint); font-family: var(--font-mono); }
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  color: var(--ink-faint);
+  padding: 4px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  transition: color var(--t-fast), background var(--t-fast);
+
+  &:hover {
+    color: var(--coral);
+    background: var(--coral-tint);
+  }
+}
+
+/* ── Title ─────────────────────────────────────────────────────────────────── */
+.titleLink { text-decoration: none; color: inherit; }
+.titleLink:hover .title { color: var(--primary); }
+
+.title {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+  transition: color var(--t-base);
+}
+
+/* ── Body snippet ──────────────────────────────────────────────────────────── */
+.snippet {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Attached resource chip ─────────────────────────────────────────────────── */
+.attachChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 6px 12px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  transition: border-color var(--t-base), background var(--t-base);
+  max-width: 100%;
+}
+
+.attachChip:hover { border-color: var(--primary); background: var(--primary-tint); }
+
+.attachType {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.attachTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.attachExt {
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
+/* ── Tags ──────────────────────────────────────────────────────────────────── */
+.tags { display: flex; flex-wrap: wrap; gap: var(--sp-1); }
+
+/* ── Action row ─────────────────────────────────────────────────────────────── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-1);
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  transition: color var(--t-base);
+}
+
+.action:hover { color: var(--ink); }
+
+.upvoted { color: var(--primary) !important; }
+.bookmarked { color: var(--amber) !important; }
+
+/* ── Skeleton ──────────────────────────────────────────────────────────────── */
+.skeleton { pointer-events: none; }
+
+.skAvatar {
+  width: 36px; height: 36px;
+  border-radius: var(--r-full);
+  background: var(--border-soft);
+  flex-shrink: 0;
+  animation: shimmer 1.4s infinite linear;
+  background-image: linear-gradient(90deg, var(--border-soft) 0%, var(--border) 50%, var(--border-soft) 100%);
+  background-size: 200% 100%;
+}
+
+.skLine {
+  border-radius: var(--r-sm);
+  background: var(--border-soft);
+  background-image: linear-gradient(90deg, var(--border-soft) 0%, var(--border) 50%, var(--border-soft) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+.skTitle { height: 18px; width: 75%; margin-bottom: 8px; }
+.skMeta  { height: 13px; width: 50%; }
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}

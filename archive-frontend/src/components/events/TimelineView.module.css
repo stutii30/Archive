@@ -1,0 +1,90 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: var(--sp-2) 0;
+}
+
+.timelineItem {
+  display: flex;
+  gap: var(--sp-4);
+  position: relative;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--r-full);
+  background: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-tint);
+  margin-top: 4px;
+  z-index: 1;
+}
+
+.line {
+  width: 2px;
+  flex-grow: 1;
+  background: var(--border);
+  margin-top: 4px;
+  margin-bottom: -4px;
+}
+
+.contentCol {
+  flex: 1;
+  padding-bottom: var(--sp-6);
+}
+
+.stageHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.stageNumber {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  background: var(--primary-tint);
+  padding: 2px 8px;
+  border-radius: var(--r-sm);
+}
+
+.stageDate {
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+.stageTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2px 0 6px 0;
+}
+
+.stageDescription {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.noTimeline {
+  padding: var(--sp-4);
+  background: var(--paper);
+  border-radius: var(--r-md);
+  color: var(--ink-soft);
+  font-size: 13px;
+}

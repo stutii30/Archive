@@ -1,0 +1,86 @@
+.composer {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+/* ── Top row ─────────────────────────────────────────────────────────────────── */
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.trigger {
+  flex: 1;
+  padding: 10px 16px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  color: var(--ink-faint);
+  font-size: 14px;
+  font-family: var(--font-sans);
+  text-align: left;
+  cursor: text;
+  transition: border-color var(--t-base);
+}
+.trigger:hover { border-color: var(--primary); }
+
+.titleInput {
+  flex: 1;
+  padding: 10px 14px;
+  background: var(--paper);
+  border: 1px solid var(--primary);
+  border-radius: var(--r-md);
+  box-shadow: 0 0 0 3px var(--primary-tint);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  outline: none;
+}
+
+/* ── Type pills ──────────────────────────────────────────────────────────────── */
+.typeRow { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+
+.typePill {
+  padding: 5px 12px;
+  border-radius: var(--r-full);
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all var(--t-base);
+}
+.typePill:hover { border-color: var(--primary); color: var(--primary); }
+.typePillActive { background: var(--primary); border-color: var(--primary); color: var(--primary-ink); }
+
+/* ── Body + tag inputs ───────────────────────────────────────────────────────── */
+.bodyInput,
+.tagInput {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  font-size: 13px;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  outline: none;
+  resize: vertical;
+  transition: border-color var(--t-base), box-shadow var(--t-base);
+}
+.bodyInput:focus, .tagInput:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-tint);
+}
+.bodyInput::placeholder, .tagInput::placeholder { color: var(--ink-faint); }
+
+/* ── Footer ──────────────────────────────────────────────────────────────────── */
+.footer { display: flex; justify-content: flex-end; gap: var(--sp-3); }

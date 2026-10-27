@@ -1,0 +1,168 @@
+/* =============================================================================
+   Archive — Design Tokens
+   Single source of truth for all CSS custom properties.
+   All four themes define every token. Never leave a token undefined.
+   ============================================================================= */
+
+/* ── Theme: Light (default) ─────────────────────────────────────────────────── */
+[data-theme="light"] {
+  /* Surfaces */
+  --paper:          #F6F5FB;
+  --surface:        #FFFFFF;
+  --surface-raised: #FFFFFF;
+
+  /* Ink */
+  --ink:            #181925;
+  --ink-soft:       #5B5C6C;
+  --ink-faint:      #9394A5;
+
+  /* Borders */
+  --border:         #E7E5F3;
+  --border-soft:    #EFEDF7;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(24, 25, 37, 0.04), 0 1px 1px rgba(24, 25, 37, 0.03);
+  --shadow-md: 0 8px 24px rgba(24, 25, 37, 0.08), 0 2px 6px rgba(24, 25, 37, 0.04);
+  --shadow-lg: 0 20px 48px rgba(24, 25, 37, 0.14);
+}
+
+/* ── Theme: Dark Grey ────────────────────────────────────────────────────────── */
+[data-theme="dark-grey"] {
+  color-scheme: dark;
+  --paper:          #1C1D24;
+  --surface:        #24252E;
+  --surface-raised: #2B2C37;
+
+  --ink:            #F1F1F6;
+  --ink-soft:       #B6B7C6;
+  --ink-faint:      #7C7D8D;
+
+  --border:         #363744;
+  --border-soft:    #2E2F3A;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.28), 0 2px 6px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.40);
+}
+
+/* ── Theme: Black (OLED) ─────────────────────────────────────────────────────── */
+[data-theme="black"] {
+  color-scheme: dark;
+  --paper:          #000000;
+  --surface:        #121212;
+  --surface-raised: #191919;
+
+  --ink:            #F5F5F5;
+  --ink-soft:       #ABABAB;
+  --ink-faint:      #707070;
+
+  --border:         #282828;
+  --border-soft:    #1E1E1E;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.65);
+}
+
+/* ── Theme: Dark Blue ────────────────────────────────────────────────────────── */
+[data-theme="dark-blue"] {
+  color-scheme: dark;
+  --paper:          #0A1220;
+  --surface:        #101B30;
+  --surface-raised: #132038;
+
+  --ink:            #EAF0FC;
+  --ink-soft:       #A9B7D6;
+  --ink-faint:      #6E7CA0;
+
+  --border:         #1F2E4C;
+  --border-soft:    #182541;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.22);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.22);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark-grey"] input[type="date"],
+[data-theme="black"] input[type="date"],
+[data-theme="dark-blue"] input[type="date"],
+[data-theme="dark-grey"] input[type="datetime-local"],
+[data-theme="black"] input[type="datetime-local"],
+[data-theme="dark-blue"] input[type="datetime-local"] {
+  color-scheme: dark;
+}
+
+[data-theme="dark-grey"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="black"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="dark-blue"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="dark-grey"] input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+[data-theme="black"] input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+[data-theme="dark-blue"] input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1) !important;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="light"] input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: none !important;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+
+/* =============================================================================
+   Global tokens — same across all themes
+   ============================================================================= */
+:root {
+  /* ── Accent Colors ─────────────────────────────────────────────────────────── */
+  --primary:       #6C5CE7;
+  --primary-ink:   #FFFFFF;
+  --primary-tint:  #EFEBFD;
+
+  --blue:          #4C8DFF;
+  --blue-tint:     #EAF1FF;
+
+  --teal:          #00B39C;
+  --teal-tint:     #E3F7F4;
+
+  --coral:         #FF6F4E;
+  --coral-tint:    #FFEBE5;
+
+  --amber:         #E8A400;
+  --amber-tint:    #FFF4DA;
+
+  --pink:          #F0508C;
+  --pink-tint:     #FDE8F0;
+
+  /* ── Spacing Scale (4px base) ─────────────────────────────────────────────── */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+
+  /* ── Border Radius ─────────────────────────────────────────────────────────── */
+  --r-sm:   10px;
+  --r-md:   16px;
+  --r-lg:   22px;
+  --r-xl:   28px;
+  --r-full: 9999px;
+
+  /* ── Typography ────────────────────────────────────────────────────────────── */
+  --font-sans:  'Inter', system-ui, sans-serif;
+  --font-head:  'Space Grotesk', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ── Transitions ───────────────────────────────────────────────────────────── */
+  --t-fast:   120ms ease;
+  --t-base:   150ms ease;
+  --t-state:  200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --t-layout: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Sidebar width ─────────────────────────────────────────────────────────── */
+  --sidebar-w: 236px;
+}

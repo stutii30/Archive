@@ -1,0 +1,27 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# JavaScript, JSX, CSS, JSON, YAML, Markdown
+[*.{js,jsx,ts,tsx,css,json,yml,yaml,md}]
+indent_style = space
+indent_size = 2
+
+# Java
+[*.java]
+indent_style = space
+indent_size = 4
+
+# XML (Maven pom.xml, Spring config)
+[*.xml]
+indent_style = space
+indent_size = 4
+
+# Properties
+[*.properties]
+indent_style = space
+indent_size = 2

@@ -1,0 +1,60 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border-radius: var(--r-lg);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: box-shadow var(--t-base), transform var(--t-fast), background var(--t-base),
+    border-color var(--t-base), color var(--t-base);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* ── Sizes ─────────────────────────────────────────────────────────────────── */
+.sm { font-size: 12px; padding: 6px 12px; }
+.md { font-size: 13px; padding: 9px 16px; }
+.lg { font-size: 14px; padding: 12px 20px; }
+
+/* ── Variants ──────────────────────────────────────────────────────────────── */
+.primary {
+  background: var(--primary);
+  color: var(--primary-ink);
+}
+.primary:hover:not(:disabled) { box-shadow: var(--shadow-md); }
+
+.ghost {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+.ghost:hover:not(:disabled) { box-shadow: var(--shadow-md); }
+
+.icon {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 8px;
+  aspect-ratio: 1;
+}
+.icon:hover:not(:disabled) { box-shadow: var(--shadow-md); }
+
+/* ── Active state ──────────────────────────────────────────────────────────── */
+.btn:active:not(:disabled) { transform: scale(0.97); }
+
+/* ── Disabled ──────────────────────────────────────────────────────────────── */
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Focus visible ─────────────────────────────────────────────────────────── */
+.btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

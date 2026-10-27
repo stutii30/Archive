@@ -1,0 +1,24 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+
+jwt:
+  secret: ${JWT_SECRET}
+
+storage:
+  endpoint: ${STORAGE_ENDPOINT}
+  bucket: ${STORAGE_BUCKET}
+  access-key: ${STORAGE_ACCESS_KEY}
+  secret-key: ${STORAGE_SECRET_KEY}
+  public-url: ${STORAGE_PUBLIC_URL}
+
+logging:
+  level:
+    root: WARN
+    com.archive: INFO

@@ -1,0 +1,127 @@
+# ── Node / Frontend ──────────────────────────────────────
+node_modules/
+dist/
+.vite/
+*.local
+
+# ── Java / Backend ───────────────────────────────────────
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+hs_err_pid*
+
+# ── Environment / Secrets ────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── IDEs ─────────────────────────────────────────────────
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# ── OS ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs ─────────────────────────────────────────────────
+*.log
+logs/
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# ==========================
+# Node.js (Frontend)
+# ==========================
+archive-frontend/node_modules/
+archive-frontend/dist/
+archive-frontend/build/
+archive-frontend/.vite/
+archive-frontend/.cache/
+archive-frontend/npm-debug.log*
+archive-frontend/yarn-debug.log*
+archive-frontend/yarn-error.log*
+archive-frontend/pnpm-debug.log*
+
+# ==========================
+# React Environment Files
+# ==========================
+archive-frontend/.env
+archive-frontend/.env.*
+!archive-frontend/.env.example
+
+# ==========================
+# Spring Boot / Java (Backend)
+# ==========================
+archive-backend/target/
+archive-backend/build/
+archive-backend/out/
+archive-backend/*.log
+
+# Maven
+archive-backend/.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+archive-backend/.gradle/
+
+# IntelliJ
+archive-backend/.idea/
+archive-backend/*.iml
+
+# Eclipse
+archive-backend/.classpath
+archive-backend/.project
+archive-backend/.settings/
+
+# ==========================
+# Backend Environment Files
+# ==========================
+archive-backend/.env
+archive-backend/.env.*
+!archive-backend/.env.example
+
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/
+
+# ==========================
+# Docker
+# ==========================
+docker-data/
+*.pid
+
+# ==========================
+# Misc
+# ==========================
+coverage/
+*.swp
+*.swo

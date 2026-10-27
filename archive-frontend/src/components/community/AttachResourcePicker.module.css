@@ -1,0 +1,90 @@
+.picker { position: relative; }
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 9px 14px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--ink-faint);
+  transition: border-color var(--t-base);
+}
+.inputWrap:focus-within { border-color: var(--primary); color: var(--ink); }
+
+.input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 13px;
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+.input::placeholder { color: var(--ink-faint); }
+
+/* ── Dropdown ─────────────────────────────────────────────────────────────────── */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0; right: 0;
+  z-index: 200;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+  list-style: none;
+  padding: var(--sp-1);
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--t-base);
+}
+.option:hover { background: var(--paper); }
+
+.optType {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--primary);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.optTitle { font-size: 13px; color: var(--ink); flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.optExt { font-size: 11px; color: var(--ink-faint); font-family: var(--font-mono); flex-shrink: 0; }
+
+/* ── Selected chip ────────────────────────────────────────────────────────────── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 7px 12px;
+  background: var(--primary-tint);
+  border: 1px solid var(--primary);
+  border-radius: var(--r-md);
+}
+.chipType { font-size: 10px; font-weight: 700; font-family: var(--font-mono); color: var(--primary); text-transform: uppercase; }
+.chipTitle { font-size: 13px; color: var(--ink); font-weight: 500; }
+.chipRemove {
+  display: flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px;
+  border-radius: var(--r-full);
+  border: none;
+  background: var(--primary);
+  color: var(--primary-ink);
+  cursor: pointer;
+  margin-left: var(--sp-1);
+}

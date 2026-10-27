@@ -1,0 +1,156 @@
+.builder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.builderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.addBtn {
+  background: var(--primary-tint);
+  color: var(--primary);
+  border: none;
+  padding: 6px 12px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.addBtn:hover {
+  background: var(--border);
+}
+
+.emptyText {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin: 0;
+}
+
+.stageList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: var(--sp-1);
+}
+
+.stageCard {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.stageCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stageBadge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--surface);
+  padding: 2px 8px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border-soft);
+}
+
+.reorderBtns {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--surface);
+    color: var(--ink);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.danger:hover {
+  color: var(--coral) !important;
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.input, .textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 8px var(--sp-2);
+  font-size: 13px;
+  color: var(--ink);
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+}
+
+.input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+.input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.textarea {
+  resize: vertical;
+}

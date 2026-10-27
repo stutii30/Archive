@@ -1,0 +1,131 @@
+/* =============================================================================
+   Archive — Utility Classes
+   Reusable helper classes only. No component-specific styles here.
+   ============================================================================= */
+
+/* ── Typography helpers ──────────────────────────────────────────────────────── */
+.display {
+  font-family: var(--font-head);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.caption {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink-faint);
+  line-height: 1.4;
+}
+
+.body-sm {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* ── Text colors ─────────────────────────────────────────────────────────────── */
+.text-ink       { color: var(--ink); }
+.text-soft      { color: var(--ink-soft); }
+.text-faint     { color: var(--ink-faint); }
+.text-primary   { color: var(--primary); }
+.text-teal      { color: var(--teal); }
+.text-coral     { color: var(--coral); }
+.text-amber     { color: var(--amber); }
+.text-blue      { color: var(--blue); }
+.text-pink      { color: var(--pink); }
+
+/* ── Accessibility ───────────────────────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Flex utilities ──────────────────────────────────────────────────────────── */
+.flex         { display: flex; }
+.flex-col     { display: flex; flex-direction: column; }
+.flex-1       { flex: 1; }
+.items-center { align-items: center; }
+.items-start  { align-items: flex-start; }
+.items-end    { align-items: flex-end; }
+.justify-center      { justify-content: center; }
+.justify-between     { justify-content: space-between; }
+.justify-end         { justify-content: flex-end; }
+.gap-1  { gap: var(--sp-1); }
+.gap-2  { gap: var(--sp-2); }
+.gap-3  { gap: var(--sp-3); }
+.gap-4  { gap: var(--sp-4); }
+.gap-6  { gap: var(--sp-6); }
+
+/* ── Truncation ──────────────────────────────────────────────────────────────── */
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Spacing helpers ─────────────────────────────────────────────────────────── */
+.w-full  { width: 100%; }
+.h-full  { height: 100%; }
+
+/* ── Shimmer skeleton animation ──────────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--border-soft) 25%,
+    var(--surface)     50%,
+    var(--border-soft) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: var(--r-sm);
+}
+
+/* ── Divider ─────────────────────────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background-color: var(--border-soft);
+  border: none;
+  margin: 0;
+}
